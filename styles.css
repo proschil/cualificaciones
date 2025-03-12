@@ -28,6 +28,16 @@ h1 {
 
 .selection-container {
     margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #d1d1d1;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.selection-container:hover {
+    transform: scale(1.02);
 }
 
 select {
@@ -98,6 +108,13 @@ th:nth-child(4) { background-color: #a8d5ba; }
 th:nth-child(5) { background-color: #b3cde0; }
 th:nth-child(6) { background-color: #fbc4ab; }
 th:nth-child(7) { background-color: #fbc4ab; }
+
+/* Colores para los niveles 1, 2 y 3 (ahora más compatibles) */
+td:nth-child(3) { font-weight: bold; }
+
+td:nth-child(3):has(> :is(:contains('1'))) { color: #2e7d32; }
+td:nth-child(3):has(> :is(:contains('2'))) { color: #d32f2f; }
+td:nth-child(3):has(> :is(:contains('3'))) { color: #1976d2; }
 
 /* Centrar la fila de rótulos */
 thead tr {
