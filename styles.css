@@ -55,11 +55,14 @@ table {
     width: 100%;
     border-collapse: collapse;
     min-width: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 th, td {
     padding: 12px 15px;
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid #ddd;
 }
 
@@ -68,10 +71,12 @@ th {
     font-weight: bold;
     position: sticky;
     top: 0;
+    color: #000;
 }
 
 tr:hover {
-    background-color: #f5f5f5;
+    background-color: #e0f7fa;
+    transition: background-color 0.3s ease;
 }
 
 .hidden {
@@ -83,4 +88,18 @@ tr:hover {
     color: #999;
     font-style: italic;
     background-color: #f9f9f9;
+}
+
+/* Colores solo para la primera fila (rótulos) */
+th:nth-child(1) { background-color: #a8d5ba; }
+th:nth-child(2) { background-color: #a8d5ba; }
+th:nth-child(3) { background-color: #a8d5ba; }
+th:nth-child(4) { background-color: #a8d5ba; }
+th:nth-child(5) { background-color: #b3cde0; }
+th:nth-child(6) { background-color: #fbc4ab; }
+th:nth-child(7) { background-color: #fbc4ab; }
+
+/* Centrar la fila de rótulos */
+thead tr {
+    text-align: center;
 }
